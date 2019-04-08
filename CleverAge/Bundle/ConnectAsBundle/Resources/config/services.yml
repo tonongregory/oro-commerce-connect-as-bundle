@@ -1,0 +1,18 @@
+services:
+  CleverAge\Bundle\ConnectAsBundle\Factory\TokenFactory:
+    arguments: [64]
+
+  CleverAge\Bundle\ConnectAsBundle\Controller\ConnectAsController:
+    arguments:
+      - '@CleverAge\Bundle\ConnectAsBundle\Factory\TokenFactory'
+      - '@oro_customer_user.manager'
+      - '@doctrine'
+      - '@oro_config.manager'
+      - '@oro_scope.scope_manager'
+
+  CleverAge\Bundle\ConnectAsBundle\Security\ConnectAsAuthenticator:
+    arguments:
+      - '@oro_redirect.routing.router'
+      - '@security.token_storage'
+      - '@oro_securitypro.security.token.factory.username_password_organization'
+      - '@oro_entity.doctrine_helper'

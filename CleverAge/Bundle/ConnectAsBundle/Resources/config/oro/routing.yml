@@ -1,0 +1,4 @@
+cleverage_connect_as:
+  resource: "@CleverAgeConnectAsBundle/Controller/ConnectAsController.php"
+  type: annotation
+  prefix: /cleverage/customer/user

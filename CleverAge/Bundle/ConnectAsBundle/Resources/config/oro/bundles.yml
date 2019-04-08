@@ -1,0 +1,2 @@
+bundles:
+    - { name: CleverAge\Bundle\ConnectAsBundle\CleverAgeConnectAsBundle, priority: 1000 }
