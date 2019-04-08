@@ -1,0 +1,7 @@
+security:
+    firewalls:
+        frontend:
+          guard:
+            authenticators:
+              - CleverAge\Bundle\ConnectAsBundle\Security\ConnectAsAuthenticator
+            entry_point: CleverAge\Bundle\ConnectAsBundle\Security\ConnectAsAuthenticator
